@@ -41,9 +41,7 @@ import React, { useState } from 'react'
       return (
         <div className="container">
           <header>
-            <h1>
-              拜年文案<span className="fix-font">產</span>生器
-            </h1>
+            <h1>拜年文案產生器</h1>
             <h2>快速生成創意新年祝福語</h2>
             <p>為家人、朋友、同事送上最貼心的新年祝福！</p>
           </header>

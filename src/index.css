@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=PingFang+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 
     :root {
       --primary: #B22222;
@@ -17,7 +17,7 @@
       min-height: 100vh;
       background-color: var(--primary);
       color: var(--text);
-      font-family: 'PingFang SC', sans-serif;
+      font-family: 'Noto Sans TC', sans-serif;
     }
 
     .container {
@@ -36,21 +36,9 @@
     }
 
     header h1 {
-      font-family: 'Ma Shan Zheng', cursive;
       font-size: 12vw;
       line-height: 1;
-    }
-
-    /* Fix for the character 產 */
-    header h1::after {
-      content: '拜年文案產生器';
-      font-family: 'PingFang SC', sans-serif;
-      position: absolute;
-      visibility: hidden;
-    }
-
-    header h1 span.fix-font {
-      font-family: 'PingFang SC', sans-serif;
+      font-weight: 700;
     }
 
     header h2 {
@@ -152,6 +140,5 @@
 
     footer {
       margin-top: 1.5rem;
-      font-family: 'Ma Shan Zheng', cursive;
       font-size: 1.2vw;
     }
