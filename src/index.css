@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=PingFang+SC:wght@400;700&display=swap');
+
+    :root {
+      --primary: #B22222;
+      --secondary: #FFD700;
+      --text: #FFFFFF;
+      --background: #FFFACD;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--primary);
+      color: var(--text);
+      font-family: 'PingFang SC', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 12vw;
+      line-height: 1;
+    }
+
+    /* Fix for the character 產 */
+    header h1::after {
+      content: '拜年文案產生器';
+      font-family: 'PingFang SC', sans-serif;
+      position: absolute;
+      visibility: hidden;
+    }
+
+    header h1 span.fix-font {
+      font-family: 'PingFang SC', sans-serif;
+    }
+
+    header h2 {
+      font-size: 2.5vw;
+      font-weight: bold;
+      margin: 0.8rem 0;
+    }
+
+    header p {
+      font-size: 2vw;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    .category-selector {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .category-selector button {
+      padding: 0.4rem 0.8rem;
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1.2vw;
+    }
+
+    .category-selector button.active {
+      border-color: var(--primary);
+      background: var(--secondary);
+      color: var(--primary);
+    }
+
+    .generate-btn {
+      padding: 0.8rem 1.6rem;
+      background: var(--secondary);
+      color: var(--primary);
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .generate-btn:hover {
+      background: linear-gradient(to right, #FFA500, #FFD700);
+    }
+
+    .generate-btn:active {
+      transform: scale(0.95);
+    }
+
+    .wish-box {
+      width: 100%;
+      min-height: 150px;
+      padding: 1.5rem;
+      background: rgba(255, 250, 205, 0.8);
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      color: var(--primary);
+      font-size: 1.8vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .copy-notice {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 0.5rem;
+      background: var(--secondary);
+      color: var(--primary);
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-family: 'Ma Shan Zheng', cursive;
+      font-size: 1.2vw;
+    }
